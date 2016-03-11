@@ -1,0 +1,62 @@
+h2 {
+	text-align: center;
+}
+
+body {
+	margin: 10px;
+}
+
+.button {
+	display: inline-block;
+}
+
+.bcards_button {
+	float:left;
+	margin: 30px;
+}
+
+.wcards_button {
+	float:right;
+	margin: 30px
+}
+
+.bcard_div {
+	display: inline-block;
+	float:left;
+	width: 250px;
+	border: solid black 2px;
+	height: 300px;
+	margin: 10px;
+	background-color: black;
+	color: white;
+	padding:5px;
+	font-weight: bold;
+}
+
+.wcard_div {
+	display: inline-block;
+	float:left;
+	width: 250px;
+	border: solid black 2px;
+	height: 300px;
+	margin: 10px;
+	padding:5px;
+	font-weight: bold;
+}
+
+#buttons {
+	display: inline;
+	float: center;
+}
+
+#cards {
+	display: inline;
+	float: center;
+}
+
+#white_cards {
+	display: inline;
+}
+
+
+

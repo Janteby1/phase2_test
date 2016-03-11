@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2 id="welcome">Welcome</h2>
+
+
+
+	<div id="buttons">
+		<form action="" class='bcards_button'>
+	        <input class="button" id="bcards_button" type="submit" name='get_bcard' value= "Get Black Card">
+	    </form>
+
+	    <form action="" class='wcards_button'>
+	        <input class="button" id="wcards_button" type="submit" name='get_wcards' value= "Get White Cards">
+	    </form>
+
+	</div>
+
+
+
+	<div id="cards">
+		
+    <div class="bcard_div">
+        <!-- this is where everything from mustache will render -->
+     </div>
+
+		<!-- this calls the mustache -->
+        {%include 'bcards.html' %}
+
+
+
+    <div class="wcard_div">
+        <!-- this is where everything from mustache will render -->
+     </div>
+	
+		<!-- this calls the mustache -->
+        {%include 'bcards.html' %}
+	</div>
+
+
+
+
+
+<!-- we can show a list of all the black and white cards if we want here  -->
+
+<!-- 	<h3>Black Cards </h3>
+	
+    {% for card in b_cards %}
+
+        <div class="card">
+            <div class="content">{{ card.content }} </div>
+        </div>
+
+    {% endfor %}
+
+	<br>
+	<h3>White Cards </h3>
+
+    {% for card in w_cards %}
+
+        <div class="card">
+            <div class="content">{{ card.content }} </div>
+        </div>
+
+    {% endfor %}
+ -->
+{% endblock content %}
+
+
+
