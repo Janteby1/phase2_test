@@ -17,6 +17,7 @@ class Index(View):
         w_cards = WCard.objects.filter(show=True)
         b_cards = BCard.objects.filter(show=True)
         # put all the posts into a context dict
+        
         context ["w_cards"] = w_cards
         context ["b_cards"] = b_cards
         # send them all to the template
@@ -34,6 +35,7 @@ class Pick_Black(View):
             # put all the values into a json dictionary with a method called from the models
             cards = [card.to_json() for card in cards]
             # put the card into a context dict
+
             data = {
                 "cards": cards[pk-1] }
             # not good --> I am returning all the cards then picking a random one rather than getting a randon one from the db
@@ -50,11 +52,21 @@ class Pick_White(View):
             # put all the values into a json dictionary with a method called from the models
             cards = [card.to_json() for card in cards]
             # put the card into a context dict
+
+            cardslist = []
+            # pick 5 cards randomly from what you returned from the db
+            for i in range (0,5):
+                pk=randint(1, 8)
+                cardslist.append(cards[pk-1])
+
             data = {
-                "cards": cards }
+                "cards": cardslist }
+
             # not good --> I am returning all the cards then picking a random one 
             # rather than getting a randon one from the db, here can cause doubles 
             return JsonResponse(data) # return a json object to the ajax request
+
+
 
 
 
