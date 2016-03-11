@@ -45,6 +45,8 @@ body {
 	padding:5px;
 	font-weight: bold;
 	border-radius: 10px;
+	position: fixed;
+	margin-top:40px;
 }
 
 .wcard {
@@ -53,10 +55,16 @@ body {
 	width: 250px;
 	height: 300px;
 	margin: 10px;
+	margin-left: 300px;
 	padding:5px;
 	font-weight: bold;
 	border: solid black 3px;
 	border-radius: 10px;
+/*	position: absolute;
+*/}
+
+.wcard:hover {
+	background-color: yellow;
 }
 
 .wcard_div {

@@ -12,22 +12,21 @@ from random import randint
 # Create your views here.
 class Index(View):
     def get(self, request):
-        context = {}
-        # this line gets all the posts that we have in the db and orders them by most recent
-        w_cards = WCard.objects.filter(show=True)
-        b_cards = BCard.objects.filter(show=True)
-        # put all the posts into a context dict
+        # context = {}
+        # # this line gets all the posts that we have in the db and orders them by most recent
+        # w_cards = WCard.objects.filter(show=True)
+        # b_cards = BCard.objects.filter(show=True)
+        # # put all the posts into a context dict
 
-        context ["w_cards"] = w_cards
-        context ["b_cards"] = b_cards
-        # send them all to the template
-        return render(request, "index.html", context)
+        # context ["w_cards"] = w_cards
+        # context ["b_cards"] = b_cards
+        # # send them all to the template
+        return render(request, "index.html")
 
 
 class Pick_Black(View):
     def get(self, request):
         # if we just want an ajax request we dont need a seperate class 
-
         if request.is_ajax():   
             pk=randint(1, 90)  # randint is inclusive at both ends (randomly gives 1, 2 or 3)
             # do all the logic and filtering here, only get the comments that are shown and have the right id 
@@ -45,7 +44,6 @@ class Pick_Black(View):
 class Pick_White(View):
     def get(self, request):
         # if we just want an ajax request we dont need a seperate class 
-
         if request.is_ajax():   
             # do all the logic and filtering here, only get the comments that are shown and have the right id 
             cards = WCard.objects.filter(show=True)
