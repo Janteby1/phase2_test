@@ -50,11 +50,8 @@ class Pick_White(View):
             # put all the values into a json dictionary with a method called from the models
             cards = [card.to_json() for card in cards]
             # put the card into a context dict
-
-            for i in range (0,5):
-                pk=randint(1, 8)  # randint is inclusive at both ends
-                data = { 
-                    "cards": cards[pk-1] }
+            data = {
+                "cards": cards }
             # not good --> I am returning all the cards then picking a random one 
             # rather than getting a randon one from the db, here can cause doubles 
             return JsonResponse(data) # return a json object to the ajax request

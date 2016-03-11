@@ -16,7 +16,7 @@ $(document).ready(function(){
             // use this to just stick it onto the DOM
             // $('.wcard_div').append(data.cards)
             
-            var template = $('#list').html();
+            var template = $('#wlist').html();
             // we get an object with a property comments, so here we call data.comments or just pass the data
             var renderM = Mustache.render(template,data);
             console.log(renderM); //for testing 

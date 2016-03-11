@@ -2,11 +2,15 @@
 	
 	<script id="list" type="x-tmpl-mustache">
 
+        {{#cards}}
+
             <div class="card">
 
-                <div id="content"> {{ cards.content}} </div>
+                <div id="content"> {{ content}} </div>
                 <br>
             </div>
+
+        {{/cards}}
 
 	</script>
 
