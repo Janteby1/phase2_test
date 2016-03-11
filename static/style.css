@@ -1,9 +1,22 @@
 h2 {
 	text-align: center;
+	color: green;
 }
 
 body {
 	margin: 10px;
+}
+
+#index_link {
+	text-align: center;
+	font-size: 30px;
+	color:red;
+	text-align: center;
+	margin-left: 50px;
+}
+
+#index_link:hover {
+	color: blue;
 }
 
 .button {
