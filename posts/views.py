@@ -17,7 +17,7 @@ class Index(View):
         w_cards = WCard.objects.filter(show=True)
         b_cards = BCard.objects.filter(show=True)
         # put all the posts into a context dict
-        
+
         context ["w_cards"] = w_cards
         context ["b_cards"] = b_cards
         # send them all to the template
@@ -29,7 +29,7 @@ class Pick_Black(View):
         # if we just want an ajax request we dont need a seperate class 
 
         if request.is_ajax():   
-            pk=randint(1, 3)  # randint is inclusive at both ends (randomly gives 1, 2 or 3)
+            pk=randint(1, 90)  # randint is inclusive at both ends (randomly gives 1, 2 or 3)
             # do all the logic and filtering here, only get the comments that are shown and have the right id 
             cards = BCard.objects.filter(show=True)
             # put all the values into a json dictionary with a method called from the models
@@ -56,7 +56,7 @@ class Pick_White(View):
             cardslist = []
             # pick 5 cards randomly from what you returned from the db
             for i in range (0,5):
-                pk=randint(1, 8)
+                pk=randint(1, 500)
                 cardslist.append(cards[pk-1])
 
             data = {
