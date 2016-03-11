@@ -50,9 +50,15 @@ $(document).ready(function(){
 			console.log(renderM); //for testing 
 
 			$(".bcard_div").html(renderM) // just attach it to post adn we dont need to conditional 
-                
+            $("#combo").html(renderM)
+
 			}
 		})
 	})
+
+    $('.wcards').on('click', function(event){
+        consolelog("YES")
+        $("#combo").append(this.content)
+    })
 });
 

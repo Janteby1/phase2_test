@@ -89,5 +89,8 @@ body {
 	display: inline;
 }
 
-
+#combo {
+	display: block;
+	float: bottom;
+}
 
